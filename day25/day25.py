@@ -10,13 +10,13 @@ def read_input(filename):
 
 def part1(row, column):
     code_no = (row + column - 2) * (row + column - 1) // 2 + column
-    return ((20151125 * pow(252533, code_no - 1, 33554393)) % 33554393)
     #for row in range(1, 10):
     #    for column in range(1, 10):
     #        p, q = row, column
     #        code_no = (p + q - 2) * (p + q - 1) //2 + q
-    #        print(row, column, "%02d" % code_no, "%8d" % ((20151125 * pow(252533, code_no - 1, 33554393)) % 33554393), sep=" ", end="")
+    #        print("%4d" % code_no, "%10d" % ((20151125 * pow(252533, code_no - 1, 33554393)) % 33554393), sep=" ", end="")
     #    print()
+    return ((20151125 * pow(252533, code_no - 1, 33554393)) % 33554393)
 
 def main(filename):
     (row, column) = read_input(filename)
